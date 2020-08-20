@@ -1,0 +1,17 @@
+D:\guojiahui\Dinner1\Dinner.BLL\obj\Debug\netstandard2.0\Dinner.BLL.csprojAssemblyReference.cache
+D:\guojiahui\Dinner1\Dinner.BLL\obj\Debug\netstandard2.0\Dinner.BLL.AssemblyInfoInputs.cache
+D:\guojiahui\Dinner1\Dinner.BLL\obj\Debug\netstandard2.0\Dinner.BLL.AssemblyInfo.cs
+D:\guojiahui\Dinner1\Dinner.BLL\obj\Debug\netstandard2.0\Dinner.BLL.csproj.CoreCompileInputs.cache
+D:\guojiahui\Dinner1\Dinner.BLL\bin\Debug\netstandard2.0\Dinner.BLL.deps.json
+D:\guojiahui\Dinner1\Dinner.BLL\bin\Debug\netstandard2.0\Dinner.BLL.dll
+D:\guojiahui\Dinner1\Dinner.BLL\bin\Debug\netstandard2.0\Dinner.BLL.pdb
+D:\guojiahui\Dinner1\Dinner.BLL\bin\Debug\netstandard2.0\Dinner.Base.dll
+D:\guojiahui\Dinner1\Dinner.BLL\bin\Debug\netstandard2.0\Dinner.DAL.dll
+D:\guojiahui\Dinner1\Dinner.BLL\bin\Debug\netstandard2.0\Dinner.DAL.pdb
+D:\guojiahui\Dinner1\Dinner.BLL\bin\Debug\netstandard2.0\Dinner.Base.pdb
+D:\guojiahui\Dinner1\Dinner.BLL\obj\Debug\netstandard2.0\Dinner.BLL.csproj.CopyComplete
+D:\guojiahui\Dinner1\Dinner.BLL\obj\Debug\netstandard2.0\Dinner.BLL.dll
+D:\guojiahui\Dinner1\Dinner.BLL\obj\Debug\netstandard2.0\Dinner.BLL.pdb
+D:\guojiahui\Dinner1\Dinner.BLL\bin\Debug\netstandard2.0\Dinner.BLL.xml
+D:\guojiahui\Dinner1\Dinner.BLL\bin\Debug\netstandard2.0\Dinner.DAL.xml
+D:\guojiahui\Dinner1\Dinner.BLL\bin\Debug\netstandard2.0\Dinner.Base.xml
