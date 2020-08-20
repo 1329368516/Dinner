@@ -1,0 +1,9 @@
+D:\guojiahui\Dinner1\Dinner.Common\bin\Debug\netstandard2.0\Dinner.Common.deps.json
+D:\guojiahui\Dinner1\Dinner.Common\bin\Debug\netstandard2.0\Dinner.Common.dll
+D:\guojiahui\Dinner1\Dinner.Common\bin\Debug\netstandard2.0\Dinner.Common.pdb
+D:\guojiahui\Dinner1\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.AssemblyInfoInputs.cache
+D:\guojiahui\Dinner1\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.AssemblyInfo.cs
+D:\guojiahui\Dinner1\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.csproj.CoreCompileInputs.cache
+D:\guojiahui\Dinner1\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.dll
+D:\guojiahui\Dinner1\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.pdb
+D:\guojiahui\Dinner1\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.csprojAssemblyReference.cache

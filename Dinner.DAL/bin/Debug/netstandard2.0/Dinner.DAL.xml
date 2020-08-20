@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dinner.DAL</name>
+    </assembly>
+    <members>
+        <member name="P:Dinner.DAL.Entities.Users.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Dinner.DAL.Entities.Users.UserCode">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Dinner.DAL.Entities.Users.Gender">
+            <summary>
+            性别（0女，1男）
+            </summary>
+        </member>
+        <member name="P:Dinner.DAL.Entities.Users.Birthday">
+            <summary>
+            出生年月日
+            </summary>
+        </member>
+        <member name="T:Dinner.DAL.Helpers.Encrypt">
+            <summary>
+            加密方法
+            </summary>
+        </member>
+        <member name="M:Dinner.DAL.Helpers.Encrypt.Md5(System.String)">
+            <summary>
+            生成32位MD5加密字符串
+            </summary>
+            <param name="strInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.DAL.Helpers.Encrypt.Md5(System.String,System.Boolean)">
+            <summary>
+            生成16位Md5加密字符串
+            </summary>
+            <param name="strInput"></param>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

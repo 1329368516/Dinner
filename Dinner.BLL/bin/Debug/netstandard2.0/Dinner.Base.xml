@@ -1,0 +1,1003 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dinner.Base</name>
+    </assembly>
+    <members>
+        <member name="M:Dinner.Base.BaseController`2.Get(`0)">
+            <summary>
+            根据ID 获取单条数据
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.BaseController`2.Add(`0)">
+            <summary>
+            根据ID 获取单条数据
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.BaseController`2.LogicDelete(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            逻辑删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:Dinner.Base.BaseController`2.Update(`0)">
+            <summary>
+            更新
+            </summary>
+            <param name="ids"></param>
+            <returns></returns> 
+        </member>
+        <member name="P:Dinner.Base.Model.AppSettings._config">
+            <summary>
+            配置文件的根节点
+            </summary>
+        </member>
+        <member name="M:Dinner.Base.Model.AppSettings.#cctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.Model.AppSettings.EnableDb">
+            <summary>
+            EnableDb
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.Model.AppSettings.ConnectionStrings">
+            <summary>
+            ConnectionStrings
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.Model.BaseResultModel`1.IsSuccess">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.Model.BaseResultModel`1.Data">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.Model.BaseResultModel`1.ErrorCode">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.Model.BaseResultModel`1.ErrorMessage">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:Dinner.Base.Model.ErrorResultModel`1">
+            <summary>
+            错误返回
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Dinner.Base.Model.ErrorResultModel`1.IsSuccess">
+             <summary>
+            是否成功
+             </summary>
+        </member>
+        <member name="P:Dinner.Base.Model.ErrorResultModel`1.ErrorCode">
+            <summary>
+            错误编号
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.Model.ErrorResultModel`1.ErrorMessage">
+            <summary>
+            错误内容
+            </summary>
+        </member>
+        <member name="M:Dinner.Base.Model.ErrorResultModel`1.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:Dinner.Base.Model.ErrorResultModel`1.#ctor(System.String,System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="errorCode">错误编号</param>
+            <param name="errorMessage">错误内容</param>
+        </member>
+        <member name="T:Dinner.Base.Model.SuccessResultModel`1">
+            <summary>
+            成功信息
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Dinner.Base.Model.SuccessResultModel`1.IsSuccess">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="M:Dinner.Base.Model.SuccessResultModel`1.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:Dinner.Base.Model.SuccessResultModel`1.#ctor(`0)">
+            <summary>
+            构造
+            </summary>
+            <param name="model">值</param>
+        </member>
+        <member name="P:Dinner.Base.BaseModel.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.BaseModel.CreateDate">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.BaseModel.IsDelete">
+            <summary>
+            是否删除（0正常，1删除）
+            </summary>
+        </member>
+        <member name="F:Dinner.Base.RedisHelper.ConnectionString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="F:Dinner.Base.RedisHelper._connMultiplexer">
+            <summary>
+            redis 连接对象
+            </summary>
+        </member>
+        <member name="F:Dinner.Base.RedisHelper.DefaultKey">
+            <summary>
+            默认的 Key 值（用来当作 RedisKey 的前缀）
+            </summary>
+        </member>
+        <member name="F:Dinner.Base.RedisHelper.Locker">
+            <summary>
+            锁
+            </summary>
+        </member>
+        <member name="F:Dinner.Base.RedisHelper._db">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.GetConnectionRedisMultiplexer">
+            <summary>
+            获取 Redis 连接对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.StringSet(System.String,System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            设置 key 并保存字符串（如果 key 已存在，则覆盖值）
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.StringSet(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{StackExchange.Redis.RedisKey,StackExchange.Redis.RedisValue}})">
+            <summary>
+            保存多个 Key-value
+            </summary>
+            <param name="keyValuePairs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.StringGet(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            获取字符串
+            </summary>
+            <param name="redisKey"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.StringSet``1(System.String,``0,System.Nullable{System.TimeSpan})">
+            <summary>
+            存储一个对象（该对象会被序列化保存）
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.StringGet``1(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            获取一个对象（会进行反序列化）
+            </summary>
+            <param name="redisKey"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.StringSetAsync(System.String,System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            保存一个字符串值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.StringSetAsync(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{StackExchange.Redis.RedisKey,StackExchange.Redis.RedisValue}})">
+            <summary>
+            保存一组字符串值
+            </summary>
+            <param name="keyValuePairs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.StringGetAsync(System.String,System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            获取单个值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.StringSetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})">
+            <summary>
+            存储一个对象（该对象会被序列化保存）
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.StringGetAsync``1(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            获取一个对象（会进行反序列化）
+            </summary>
+            <param name="redisKey"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashExists(System.String,System.String)">
+            <summary>
+            判断该字段是否存在 hash 中
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashDelete(System.String,System.String)">
+            <summary>
+            从 hash 中移除指定字段
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashDelete(System.String,System.Collections.Generic.IEnumerable{StackExchange.Redis.RedisValue})">
+            <summary>
+            从 hash 中移除指定字段
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashSet(System.String,System.String,System.String)">
+            <summary>
+            在 hash 设定值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashSet(System.String,System.Collections.Generic.IEnumerable{StackExchange.Redis.HashEntry})">
+            <summary>
+            在 hash 中设定值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashFields"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashGet(System.String,System.String)">
+            <summary>
+            在 hash 中获取值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashGet(System.String,StackExchange.Redis.RedisValue[],System.String)">
+            <summary>
+            在 hash 中获取值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashKeys(System.String)">
+            <summary>
+            从 hash 返回所有的字段值
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashValues(System.String)">
+            <summary>
+            返回 hash 中的所有值
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashSet``1(System.String,System.String,``0)">
+            <summary>
+            在 hash 设定值（序列化）
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashGet``1(System.String,System.String)">
+            <summary>
+            在 hash 中获取值（反序列化）
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashExistsAsync(System.String,System.String)">
+            <summary>
+            判断该字段是否存在 hash 中
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashDeleteAsync(System.String,System.String)">
+            <summary>
+            从 hash 中移除指定字段
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashDeleteAsync(System.String,System.Collections.Generic.IEnumerable{StackExchange.Redis.RedisValue})">
+            <summary>
+            从 hash 中移除指定字段
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashSetAsync(System.String,System.String,System.String)">
+            <summary>
+            在 hash 设定值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashSetAsync(System.String,System.Collections.Generic.IEnumerable{StackExchange.Redis.HashEntry})">
+            <summary>
+            在 hash 中设定值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashFields"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashGetAsync(System.String,System.String)">
+            <summary>
+            在 hash 中获取值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashGetAsync(System.String,StackExchange.Redis.RedisValue[],System.String)">
+            <summary>
+            在 hash 中获取值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashKeysAsync(System.String)">
+            <summary>
+            从 hash 返回所有的字段值
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashValuesAsync(System.String)">
+            <summary>
+            返回 hash 中的所有值
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashSetAsync``1(System.String,System.String,``0)">
+            <summary>
+            在 hash 设定值（序列化）
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.HashGetAsync``1(System.String,System.String)">
+            <summary>
+            在 hash 中获取值（反序列化）
+            </summary>
+            <param name="redisKey"></param>
+            <param name="hashField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListLeftPop(System.String)">
+            <summary>
+            移除并返回存储在该键列表的第一个元素
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRightPop(System.String)">
+            <summary>
+            移除并返回存储在该键列表的最后一个元素
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRemove(System.String,System.String)">
+            <summary>
+            移除列表指定键上与该值相同的元素
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRightPush(System.String,System.String)">
+            <summary>
+            在列表尾部插入值。如果键不存在，先创建再插入值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListLeftPush(System.String,System.String)">
+            <summary>
+            在列表头部插入值。如果键不存在，先创建再插入值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListLength(System.String)">
+            <summary>
+            返回列表上该键的长度，如果不存在，返回 0
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRange(System.String)">
+            <summary>
+            返回在该列表上键所对应的元素
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListLeftPop``1(System.String)">
+            <summary>
+            移除并返回存储在该键列表的第一个元素
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRightPop``1(System.String)">
+            <summary>
+            移除并返回存储在该键列表的最后一个元素
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRightPush``1(System.String,``0)">
+            <summary>
+            在列表尾部插入值。如果键不存在，先创建再插入值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListLeftPush``1(System.String,``0)">
+            <summary>
+            在列表头部插入值。如果键不存在，先创建再插入值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListLeftPopAsync(System.String)">
+            <summary>
+            移除并返回存储在该键列表的第一个元素
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRightPopAsync(System.String)">
+            <summary>
+            移除并返回存储在该键列表的最后一个元素
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRemoveAsync(System.String,System.String)">
+            <summary>
+            移除列表指定键上与该值相同的元素
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRightPushAsync(System.String,System.String)">
+            <summary>
+            在列表尾部插入值。如果键不存在，先创建再插入值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListLeftPushAsync(System.String,System.String)">
+            <summary>
+            在列表头部插入值。如果键不存在，先创建再插入值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListLengthAsync(System.String)">
+            <summary>
+            返回列表上该键的长度，如果不存在，返回 0
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRangeAsync(System.String)">
+            <summary>
+            返回在该列表上键所对应的元素
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListLeftPopAsync``1(System.String)">
+            <summary>
+            移除并返回存储在该键列表的第一个元素
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRightPopAsync``1(System.String)">
+            <summary>
+            移除并返回存储在该键列表的最后一个元素
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListRightPushAsync``1(System.String,``0)">
+            <summary>
+            在列表尾部插入值。如果键不存在，先创建再插入值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ListLeftPushAsync``1(System.String,``0)">
+            <summary>
+            在列表头部插入值。如果键不存在，先创建再插入值
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SortedSetAdd(System.String,System.String,System.Double)">
+            <summary>
+            SortedSet 新增
+            </summary>
+            <param name="redisKey"></param>
+            <param name="member"></param>
+            <param name="score"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SortedSetRangeByRank(System.String)">
+            <summary>
+            在有序集合中返回指定范围的元素，默认情况下从低到高。
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SortedSetLength(System.String)">
+            <summary>
+            返回有序集合的元素个数
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SortedSetLength(System.String,System.String)">
+            <summary>
+            返回有序集合的元素个数
+            </summary>
+            <param name="redisKey"></param>
+            <param name="memebr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SortedSetAdd``1(System.String,``0,System.Double)">
+            <summary>
+            SortedSet 新增
+            </summary>
+            <param name="redisKey"></param>
+            <param name="member"></param>
+            <param name="score"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SortedSetAddAsync(System.String,System.String,System.Double)">
+            <summary>
+            SortedSet 新增
+            </summary>
+            <param name="redisKey"></param>
+            <param name="member"></param>
+            <param name="score"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SortedSetRangeByRankAsync(System.String)">
+            <summary>
+            在有序集合中返回指定范围的元素，默认情况下从低到高。
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SortedSetLengthAsync(System.String)">
+            <summary>
+            返回有序集合的元素个数
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SortedSetRemoveAsync(System.String,System.String)">
+            <summary>
+            返回有序集合的元素个数
+            </summary>
+            <param name="redisKey"></param>
+            <param name="memebr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SortedSetAddAsync``1(System.String,``0,System.Double)">
+            <summary>
+            SortedSet 新增
+            </summary>
+            <param name="redisKey"></param>
+            <param name="member"></param>
+            <param name="score"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.KeyDelete(System.String)">
+            <summary>
+            移除指定 Key
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.KeyDelete(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            移除指定 Key
+            </summary>
+            <param name="redisKeys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.KeyExists(System.String)">
+            <summary>
+            校验 Key 是否存在
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.KeyRename(System.String,System.String)">
+            <summary>
+            重命名 Key
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisNewKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.KeyExpire(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            设置 Key 的时间
+            </summary>
+            <param name="redisKey"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.KeyDeleteAsync(System.String)">
+            <summary>
+            移除指定 Key
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.KeyDeleteAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            移除指定 Key
+            </summary>
+            <param name="redisKeys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.KeyExistsAsync(System.String)">
+            <summary>
+            校验 Key 是否存在
+            </summary>
+            <param name="redisKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.KeyRenameAsync(System.String,System.String)">
+            <summary>
+            重命名 Key
+            </summary>
+            <param name="redisKey"></param>
+            <param name="redisNewKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.KeyExpireAsync(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            设置 Key 的时间
+            </summary>
+            <param name="redisKey"></param>
+            <param name="expiry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.Subscribe(StackExchange.Redis.RedisChannel,System.Action{StackExchange.Redis.RedisChannel,StackExchange.Redis.RedisValue})">
+            <summary>
+            订阅
+            </summary>
+            <param name="channel"></param>
+            <param name="handle"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.Publish(StackExchange.Redis.RedisChannel,StackExchange.Redis.RedisValue)">
+            <summary>
+            发布
+            </summary>
+            <param name="channel"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.Publish``1(StackExchange.Redis.RedisChannel,``0)">
+            <summary>
+            发布（使用序列化）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="channel"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.SubscribeAsync(StackExchange.Redis.RedisChannel,System.Action{StackExchange.Redis.RedisChannel,StackExchange.Redis.RedisValue})">
+            <summary>
+            订阅
+            </summary>
+            <param name="channel"></param>
+            <param name="handle"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.PublishAsync(StackExchange.Redis.RedisChannel,StackExchange.Redis.RedisValue)">
+            <summary>
+            发布
+            </summary>
+            <param name="channel"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.PublishAsync``1(StackExchange.Redis.RedisChannel,``0)">
+            <summary>
+            发布（使用序列化）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="channel"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.AddKeyPrefix(System.String)">
+            <summary>
+            添加 Key 的前缀
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.AddRegisterEvent">
+            <summary>
+            添加注册事件
+            </summary>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ConnMultiplexer_ConfigurationChangedBroadcast(System.Object,StackExchange.Redis.EndPointEventArgs)">
+            <summary>
+            重新配置广播时（通常意味着主从同步更改）
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ConnMultiplexer_InternalError(System.Object,StackExchange.Redis.InternalErrorEventArgs)">
+            <summary>
+            发生内部错误时（主要用于调试）
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ConnMultiplexer_HashSlotMoved(System.Object,StackExchange.Redis.HashSlotMovedEventArgs)">
+            <summary>
+            更改集群时
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ConnMultiplexer_ConfigurationChanged(System.Object,StackExchange.Redis.EndPointEventArgs)">
+            <summary>
+            配置更改时
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ConnMultiplexer_ErrorMessage(System.Object,StackExchange.Redis.RedisErrorEventArgs)">
+            <summary>
+            发生错误时
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ConnMultiplexer_ConnectionFailed(System.Object,StackExchange.Redis.ConnectionFailedEventArgs)">
+            <summary>
+            物理连接失败时
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.ConnMultiplexer_ConnectionRestored(System.Object,StackExchange.Redis.ConnectionFailedEventArgs)">
+            <summary>
+            建立物理连接时
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.Serialize(System.Object)">
+            <summary>
+            序列化
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.RedisHelper.Deserialize``1(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.IRepositoryBase`1.FindList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
+            <summary>
+            条件查询带分页
+            </summary>
+            <param name="entity"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.IRepositoryBase`1.FindList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            条件查询
+            </summary>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.IRepositoryBase`1.QueryByID(System.Object)">
+            <summary>
+            根据ID查询实体数据
+            </summary>
+            <param name="objId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.IRepositoryBase`1.Add(`0)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.IRepositoryBase`1.Update(`0)">
+            <summary>
+            修改
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.IRepositoryBase`1.DeleteByIds(System.Object[])">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.RepositoryBase`1.FindList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32)">
+            <summary>
+            条件查询带分页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.RepositoryBase`1.FindList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            条件查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.RepositoryBase`1.Add(`0)">
+            <summary>
+            写入实体数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.RepositoryBase`1.DeleteByIds(System.Object[])">
+            <summary>
+            根据ID删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.RepositoryBase`1.QueryByID(System.Object)">
+            <summary>
+            根据ID查询一条数据
+            </summary>
+            <param name="objId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Repository.RepositoryBase`1.Update(`0)">
+            <summary>
+            更新实体数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Service.BaseService`2.insertCache(`0)">
+            <summary>
+            新增缓存
+            </summary>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Service.BaseService`2.deleteCache(`0)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="record"></param>
+        </member>
+        <member name="M:Dinner.Base.Service.IBaseService`1.Get(`0)">
+            <summary>
+            根据ID获取单条记录
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Service.IBaseService`1.LogicDelete(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            根据ID逻辑删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Service.IBaseService`1.Add(`0)">
+            <summary>
+            根据实体新增
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dinner.Base.Service.IBaseService`1.Update(`0)">
+            <summary>
+            单体更新，主键作为条件
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
