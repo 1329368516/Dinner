@@ -1,9 +1,11 @@
-﻿using Dinner.Base;
+﻿using Castle.Core.Logging;
+using Dinner.Base;
 using Dinner.Base.Model;
 using Dinner.BLL.UserService;
 using Dinner.DAL.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,11 +15,13 @@ namespace Dinner.WebApi.Controllers
 {
 
     [Route("api/[controller]")]
-    public class UsersController : BaseController<Users, IUserService>
+    public class UsersController : BaseController<UsersModel, IUserService>
     {
         private readonly IUserService userService;
-        public UsersController(IUserService _userService) : base(_userService)
+        private readonly Microsoft.Extensions.Logging.ILogger logger;
+        public UsersController(IUserService _userService,ILogger<UsersController> _logger) : base(_userService)
         {
+            logger = _logger;
             userService = _userService;
         }
         /// <summary>
@@ -26,8 +30,9 @@ namespace Dinner.WebApi.Controllers
         /// <returns></returns> 
         [HttpGet("GetUsers")]
         public async Task<JsonResult> GetUsers()
-        {
-            return Json(new SuccessResultModel<Users>(await userService.GetUsers()));
+        { 
+            logger.LogInformation("记录错误日志！");
+            return Json(new SuccessResultModel<UsersModel>(await userService.GetUsers()));
         }
 
         [HttpPut("Upload/{id}")]
@@ -35,9 +40,7 @@ namespace Dinner.WebApi.Controllers
         {
             return Json(await userService.GetUsers());
         }
-
-
-
+         
 
     }
 }

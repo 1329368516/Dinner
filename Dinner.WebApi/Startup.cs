@@ -1,6 +1,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Dinner.Base;
+using Dinner.Base.Filter;
 using Dinner.Base.Model; 
 using Dinner.WebApi.Models;
 using Dinner.WebApi.Unit;
@@ -120,7 +121,10 @@ namespace Dinner.WebApi
 
             #endregion
 
-            services.AddControllers();
+            services.AddControllers(options =>
+            {
+                options.Filters.Add(new CustomerExceptionFilter());
+            });
             services.AddSingleton(new RedisHelper());
 
 
@@ -140,8 +144,7 @@ namespace Dinner.WebApi
             var service = Assembly.Load("Dinner.BLL");
 
             //注册仓储，所有IRepository接口到Repository的映射
-            builder.RegisterAssemblyTypes(repository).Where(t => t.Name.EndsWith("Repository") && !t.Name.StartsWith("I")).AsImplementedInterfaces();
-
+            builder.RegisterAssemblyTypes(repository).Where(t => t.Name.EndsWith("Repository") && !t.Name.StartsWith("I")).AsImplementedInterfaces(); 
             //注册服务，所有IApplicationService到ApplicationService的映射
             builder.RegisterAssemblyTypes(service).Where(t => t.Name.EndsWith("Service") && !t.Name.StartsWith("I")).AsImplementedInterfaces();
             //builder.RegisterAssemblyTypes(assemblys).Where(t => t.Name.EndsWith("AppService") && !t.Name.StartsWith("I")).AsImplementedInterfaces();

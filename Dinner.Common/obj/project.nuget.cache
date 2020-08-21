@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6o5hbH8aIrbLIx/+up9NOL43iEVicYn1bbrIMGFuH2LpYn7fnvnAGISNGdw0JXoVytCWnLipc1hqHWpDIQU7eA==",
+  "dgSpecHash": "Vmfxym4LlOJ05OFHuH6zDeYbE/mn7oPKwosK0x6l9OcVvPkaDZqdbpgw0KmuzWOeuN7UB6JaILMTi90w3xpRRw==",
   "success": true,
-  "projectFilePath": "D:\\guojiahui\\Dinner1\\Dinner.Common\\Dinner.Common.csproj",
+  "projectFilePath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Common\\Dinner.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gxy_j\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\gxy_j\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

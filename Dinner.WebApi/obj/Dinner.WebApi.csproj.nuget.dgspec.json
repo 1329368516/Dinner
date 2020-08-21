@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\guojiahui\\Dinner1\\Dinner.WebApi\\Dinner.WebApi.csproj": {}
+    "D:\\guojiahui\\Git\\DinnerBase\\Dinner.WebApi\\Dinner.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\guojiahui\\Dinner1\\Dinner.Base\\Dinner.Base.csproj": {
+    "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\Dinner.Base.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\guojiahui\\Dinner1\\Dinner.Base\\Dinner.Base.csproj",
+        "projectUniqueName": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\Dinner.Base.csproj",
         "projectName": "Dinner.Base",
-        "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.Base\\Dinner.Base.csproj",
+        "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\Dinner.Base.csproj",
         "packagesPath": "C:\\Users\\gxy_j\\.nuget\\packages\\",
-        "outputPath": "D:\\guojiahui\\Dinner1\\Dinner.Base\\obj\\",
+        "outputPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -94,14 +94,14 @@
         }
       }
     },
-    "D:\\guojiahui\\Dinner1\\Dinner.BLL\\Dinner.BLL.csproj": {
+    "D:\\guojiahui\\Git\\DinnerBase\\Dinner.BLL\\Dinner.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\guojiahui\\Dinner1\\Dinner.BLL\\Dinner.BLL.csproj",
+        "projectUniqueName": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.BLL\\Dinner.BLL.csproj",
         "projectName": "Dinner.BLL",
-        "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.BLL\\Dinner.BLL.csproj",
+        "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.BLL\\Dinner.BLL.csproj",
         "packagesPath": "C:\\Users\\gxy_j\\.nuget\\packages\\",
-        "outputPath": "D:\\guojiahui\\Dinner1\\Dinner.BLL\\obj\\",
+        "outputPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -120,8 +120,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\guojiahui\\Dinner1\\Dinner.DAL\\Dinner.DAL.csproj": {
-                "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.DAL\\Dinner.DAL.csproj"
+              "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\Dinner.DAL.csproj": {
+                "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\Dinner.DAL.csproj"
               }
             }
           }
@@ -156,14 +156,14 @@
         }
       }
     },
-    "D:\\guojiahui\\Dinner1\\Dinner.DAL\\Dinner.DAL.csproj": {
+    "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\Dinner.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\guojiahui\\Dinner1\\Dinner.DAL\\Dinner.DAL.csproj",
+        "projectUniqueName": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\Dinner.DAL.csproj",
         "projectName": "Dinner.DAL",
-        "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.DAL\\Dinner.DAL.csproj",
+        "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\Dinner.DAL.csproj",
         "packagesPath": "C:\\Users\\gxy_j\\.nuget\\packages\\",
-        "outputPath": "D:\\guojiahui\\Dinner1\\Dinner.DAL\\obj\\",
+        "outputPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -182,8 +182,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\guojiahui\\Dinner1\\Dinner.Base\\Dinner.Base.csproj": {
-                "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.Base\\Dinner.Base.csproj"
+              "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\Dinner.Base.csproj": {
+                "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\Dinner.Base.csproj"
               }
             }
           }
@@ -218,14 +218,14 @@
         }
       }
     },
-    "D:\\guojiahui\\Dinner1\\Dinner.WebApi\\Dinner.WebApi.csproj": {
+    "D:\\guojiahui\\Git\\DinnerBase\\Dinner.WebApi\\Dinner.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\guojiahui\\Dinner1\\Dinner.WebApi\\Dinner.WebApi.csproj",
+        "projectUniqueName": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.WebApi\\Dinner.WebApi.csproj",
         "projectName": "Dinner.WebApi",
-        "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.WebApi\\Dinner.WebApi.csproj",
+        "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.WebApi\\Dinner.WebApi.csproj",
         "packagesPath": "C:\\Users\\gxy_j\\.nuget\\packages\\",
-        "outputPath": "D:\\guojiahui\\Dinner1\\Dinner.WebApi\\obj\\",
+        "outputPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -244,14 +244,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\guojiahui\\Dinner1\\Dinner.Base\\Dinner.Base.csproj": {
-                "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.Base\\Dinner.Base.csproj"
+              "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\Dinner.Base.csproj": {
+                "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\Dinner.Base.csproj"
               },
-              "D:\\guojiahui\\Dinner1\\Dinner.BLL\\Dinner.BLL.csproj": {
-                "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.BLL\\Dinner.BLL.csproj"
+              "D:\\guojiahui\\Git\\DinnerBase\\Dinner.BLL\\Dinner.BLL.csproj": {
+                "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.BLL\\Dinner.BLL.csproj"
               },
-              "D:\\guojiahui\\Dinner1\\Dinner.DAL\\Dinner.DAL.csproj": {
-                "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.DAL\\Dinner.DAL.csproj"
+              "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\Dinner.DAL.csproj": {
+                "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\Dinner.DAL.csproj"
               }
             }
           }
@@ -285,6 +285,10 @@
               "target": "Package",
               "version": "[3.0.5, )"
             },
+            "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Microsoft.Extensions.PlatformAbstractions": {
               "target": "Package",
               "version": "[1.1.0, )"
@@ -300,6 +304,10 @@
             "TweetinviAPI": {
               "target": "Package",
               "version": "[4.0.3, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
             }
           },
           "imports": [

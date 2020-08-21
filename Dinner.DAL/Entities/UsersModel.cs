@@ -5,7 +5,7 @@ using System;
 namespace Dinner.DAL.Entities
 {
     [SugarTable("T_User")]
-    public class Users : BaseModel
+    public class UsersModel : BaseModel
     {
         /// <summary>
         /// 用户名

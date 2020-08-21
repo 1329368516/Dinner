@@ -4,22 +4,22 @@
         <name>Dinner.DAL</name>
     </assembly>
     <members>
-        <member name="P:Dinner.DAL.Entities.Users.UserName">
+        <member name="P:Dinner.DAL.Entities.UsersModel.UserName">
             <summary>
             用户名
             </summary>
         </member>
-        <member name="P:Dinner.DAL.Entities.Users.UserCode">
+        <member name="P:Dinner.DAL.Entities.UsersModel.UserCode">
             <summary>
             密码
             </summary>
         </member>
-        <member name="P:Dinner.DAL.Entities.Users.Gender">
+        <member name="P:Dinner.DAL.Entities.UsersModel.Gender">
             <summary>
             性别（0女，1男）
             </summary>
         </member>
-        <member name="P:Dinner.DAL.Entities.Users.Birthday">
+        <member name="P:Dinner.DAL.Entities.UsersModel.Birthday">
             <summary>
             出生年月日
             </summary>

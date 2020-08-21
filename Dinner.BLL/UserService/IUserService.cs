@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Dinner.BLL.UserService
 {
-    public interface IUserService : IBaseService<Users>
+    public interface IUserService : IBaseService<UsersModel>
     {
-        Task<Users> GetUsers();
+        Task<UsersModel> GetUsers();
 
     }
 }

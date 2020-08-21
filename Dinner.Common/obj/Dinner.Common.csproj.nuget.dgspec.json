@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\guojiahui\\Dinner1\\Dinner.Common\\Dinner.Common.csproj": {}
+    "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Common\\Dinner.Common.csproj": {}
   },
   "projects": {
-    "D:\\guojiahui\\Dinner1\\Dinner.Common\\Dinner.Common.csproj": {
+    "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Common\\Dinner.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\guojiahui\\Dinner1\\Dinner.Common\\Dinner.Common.csproj",
+        "projectUniqueName": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Common\\Dinner.Common.csproj",
         "projectName": "Dinner.Common",
-        "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.Common\\Dinner.Common.csproj",
+        "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Common\\Dinner.Common.csproj",
         "packagesPath": "C:\\Users\\gxy_j\\.nuget\\packages\\",
-        "outputPath": "D:\\guojiahui\\Dinner1\\Dinner.Common\\obj\\",
+        "outputPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

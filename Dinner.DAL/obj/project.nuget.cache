@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XvKwIv87p/60UButgdy571T7ES9FrFlDlIJlGbTZq4iR/tlvSbYS9f+SFxSWk2N+QPFLaJnorqLur45urez1Lw==",
+  "dgSpecHash": "jr3y8PoAR4wuqBElVDObNPF2ezIjFrAaKe9tWOgFPUv/X7/M3camCROWoC3GLz1jviX+y9p+rWratcS66aUzFA==",
   "success": true,
-  "projectFilePath": "D:\\guojiahui\\Dinner1\\Dinner.DAL\\Dinner.DAL.csproj",
+  "projectFilePath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\Dinner.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gxy_j\\.nuget\\packages\\google.protobuf\\3.5.1\\google.protobuf.3.5.1.nupkg.sha512",
     "C:\\Users\\gxy_j\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

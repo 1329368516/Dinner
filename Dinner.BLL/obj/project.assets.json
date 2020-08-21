@@ -5659,11 +5659,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\guojiahui\\Dinner1\\Dinner.BLL\\Dinner.BLL.csproj",
+      "projectUniqueName": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.BLL\\Dinner.BLL.csproj",
       "projectName": "Dinner.BLL",
-      "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.BLL\\Dinner.BLL.csproj",
+      "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.BLL\\Dinner.BLL.csproj",
       "packagesPath": "C:\\Users\\gxy_j\\.nuget\\packages\\",
-      "outputPath": "D:\\guojiahui\\Dinner1\\Dinner.BLL\\obj\\",
+      "outputPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5682,8 +5682,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\guojiahui\\Dinner1\\Dinner.DAL\\Dinner.DAL.csproj": {
-              "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.DAL\\Dinner.DAL.csproj"
+            "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\Dinner.DAL.csproj": {
+              "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.DAL\\Dinner.DAL.csproj"
             }
           }
         }
