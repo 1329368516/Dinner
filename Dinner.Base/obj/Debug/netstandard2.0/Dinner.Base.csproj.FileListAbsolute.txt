@@ -8,3 +8,12 @@ D:\guojiahui\Dinner1\Dinner.Base\obj\Debug\netstandard2.0\Dinner.Base.pdb
 D:\guojiahui\Dinner1\Dinner.Base\bin\Debug\netstandard2.0\Dinner.Base.xml
 D:\guojiahui\Dinner1\Dinner.Base\obj\Debug\netstandard2.0\Dinner.Base.csprojAssemblyReference.cache
 D:\guojiahui\Dinner1\Dinner.Base\obj\Debug\netstandard2.0\Dinner.Base.csproj.CoreCompileInputs.cache
+D:\guojiahui\Git\DinnerBase\Dinner.Base\bin\Debug\netstandard2.0\Dinner.Base.deps.json
+D:\guojiahui\Git\DinnerBase\Dinner.Base\bin\Debug\netstandard2.0\Dinner.Base.dll
+D:\guojiahui\Git\DinnerBase\Dinner.Base\bin\Debug\netstandard2.0\Dinner.Base.pdb
+D:\guojiahui\Git\DinnerBase\Dinner.Base\bin\Debug\netstandard2.0\Dinner.Base.xml
+D:\guojiahui\Git\DinnerBase\Dinner.Base\obj\Debug\netstandard2.0\Dinner.Base.AssemblyInfoInputs.cache
+D:\guojiahui\Git\DinnerBase\Dinner.Base\obj\Debug\netstandard2.0\Dinner.Base.AssemblyInfo.cs
+D:\guojiahui\Git\DinnerBase\Dinner.Base\obj\Debug\netstandard2.0\Dinner.Base.csproj.CoreCompileInputs.cache
+D:\guojiahui\Git\DinnerBase\Dinner.Base\obj\Debug\netstandard2.0\Dinner.Base.dll
+D:\guojiahui\Git\DinnerBase\Dinner.Base\obj\Debug\netstandard2.0\Dinner.Base.pdb

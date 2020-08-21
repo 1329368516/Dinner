@@ -7,3 +7,11 @@ D:\guojiahui\Dinner1\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.csproj
 D:\guojiahui\Dinner1\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.dll
 D:\guojiahui\Dinner1\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.pdb
 D:\guojiahui\Dinner1\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.csprojAssemblyReference.cache
+D:\guojiahui\Git\DinnerBase\Dinner.Common\bin\Debug\netstandard2.0\Dinner.Common.deps.json
+D:\guojiahui\Git\DinnerBase\Dinner.Common\bin\Debug\netstandard2.0\Dinner.Common.dll
+D:\guojiahui\Git\DinnerBase\Dinner.Common\bin\Debug\netstandard2.0\Dinner.Common.pdb
+D:\guojiahui\Git\DinnerBase\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.AssemblyInfoInputs.cache
+D:\guojiahui\Git\DinnerBase\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.AssemblyInfo.cs
+D:\guojiahui\Git\DinnerBase\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.csproj.CoreCompileInputs.cache
+D:\guojiahui\Git\DinnerBase\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.dll
+D:\guojiahui\Git\DinnerBase\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.pdb

@@ -20,6 +20,12 @@ namespace Dinner.WebApi
 
         public static IWebHost BuildWebHost(string[] args) =>
              WebHost.CreateDefaultBuilder(args)
+            .ConfigureLogging((hostingContext,logging)=>
+            {
+                logging.AddFilter("System", LogLevel.Warning);
+                logging.AddFilter("Microsoft", LogLevel.Warning);
+                logging.AddLog4Net();
+            })
                  .UseStartup<Startup>()
                  .Build();
     }

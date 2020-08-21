@@ -5623,11 +5623,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\guojiahui\\Dinner1\\Dinner.Base\\Dinner.Base.csproj",
+      "projectUniqueName": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\Dinner.Base.csproj",
       "projectName": "Dinner.Base",
-      "projectPath": "D:\\guojiahui\\Dinner1\\Dinner.Base\\Dinner.Base.csproj",
+      "projectPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\Dinner.Base.csproj",
       "packagesPath": "C:\\Users\\gxy_j\\.nuget\\packages\\",
-      "outputPath": "D:\\guojiahui\\Dinner1\\Dinner.Base\\obj\\",
+      "outputPath": "D:\\guojiahui\\Git\\DinnerBase\\Dinner.Base\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

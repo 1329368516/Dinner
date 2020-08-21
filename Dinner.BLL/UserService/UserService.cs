@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Dinner.BLL.UserService
 {
-    public class UserService : BaseService<Users, IUserRepository>, IUserService
+    public class UserService : BaseService<UsersModel, IUserRepository>, IUserService
     {
         private readonly IUserRepository userRepository;
         public UserService(IUserRepository _userRepository, RedisHelper redis) : base(_userRepository, redis)
@@ -18,7 +18,7 @@ namespace Dinner.BLL.UserService
 
         }
 
-        public Task<Users> GetUsers()
+        public Task<UsersModel> GetUsers()
         { 
             return userRepository.GetUsers();
         }

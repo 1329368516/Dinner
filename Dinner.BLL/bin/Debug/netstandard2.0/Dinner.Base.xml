@@ -32,6 +32,18 @@
             <param name="ids"></param>
             <returns></returns> 
         </member>
+        <member name="T:Dinner.Base.Filter.CustomerExceptionFilter">
+            <summary>
+            自定义异常过滤器
+            </summary>
+        </member>
+        <member name="M:Dinner.Base.Filter.CustomerExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            重写OnExceptionAsync方法，定义自己的处理逻辑
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
         <member name="P:Dinner.Base.Model.AppSettings._config">
             <summary>
             配置文件的根节点

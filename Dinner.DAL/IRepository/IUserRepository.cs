@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Dinner.DAL.IRepository
 {
-    public interface IUserRepository : IRepositoryBase<Users> 
+    public interface IUserRepository : IRepositoryBase<UsersModel> 
     {
-        Task<Users> GetUsers();
+        Task<UsersModel> GetUsers();
     }
 }
