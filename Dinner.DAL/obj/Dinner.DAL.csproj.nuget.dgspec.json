@@ -75,6 +75,10 @@
               "target": "Package",
               "version": "[5.5.1, )"
             },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.7.1, )"
+            },
             "sqlSugarCore": {
               "target": "Package",
               "version": "[5.0.0.15, )"

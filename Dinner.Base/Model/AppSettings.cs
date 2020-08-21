@@ -63,13 +63,7 @@ namespace Dinner.Base.Model
 
 
         public static string redisConfiguration => _config.GetSection("RedisCaching").Value;
-
-
-
-
-
-
-
+         
         public static TokenEntity AdminConfig { get; set; }
 
 
