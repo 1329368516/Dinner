@@ -4,6 +4,13 @@
         <name>Dinner.Base</name>
     </assembly>
     <members>
+        <member name="M:Dinner.Base.Appsettings.app(System.String[])">
+            <summary>
+            封装要操作的字符串
+            </summary>
+            <param name="sections">节点</param>
+            <returns>最后一个节点的值</returns>
+        </member>
         <member name="M:Dinner.Base.BaseController`2.Get(`0)">
             <summary>
             根据ID 获取单条数据
@@ -43,6 +50,38 @@
             </summary>
             <param name="context"></param>
             <returns></returns>
+        </member>
+        <member name="T:Dinner.Base.JwtHelper">
+            <summary>
+            颁发Jwt字符串
+            </summary>
+        </member>
+        <member name="M:Dinner.Base.JwtHelper.SerilaizeJwt(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dinner.Base.TokenModelJwt">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.TokenModelJwt.Uid">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.TokenModelJwt.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Dinner.Base.TokenModelJwt.Work">
+            <summary>
+            职能
+            </summary>
         </member>
         <member name="P:Dinner.Base.Model.AppSettings._config">
             <summary>

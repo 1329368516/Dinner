@@ -2,12 +2,11 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Dinner.Base;
 using Dinner.Base.Filter;
-using Dinner.Base.Model; 
-using Dinner.WebApi.Models;
-using Dinner.WebApi.Unit;
+using Dinner.Base.Model;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Azure.KeyVault.Models;
 using Microsoft.Extensions.Configuration;
@@ -16,8 +15,9 @@ using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
-using Swashbuckle.AspNetCore.Swagger; 
+using Swashbuckle.AspNetCore.Swagger;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -35,19 +35,6 @@ namespace Dinner.WebApi
 
         public IConfiguration Configuration { get; }
         public IContainer ApplicationContainer { get; private set; }
-
-        //修改返回值为IServiceProvider，使用Autofac依赖注入容器\
-
-        //public void ConfigureContainer(ContainerBuilder builder)
-        //{
-        //    //Autofac 自动注入
-        //    Assembly service = Assembly.Load("Dinner.BLL");
-        //    Assembly repository = Assembly.Load("Dinner.DAL");
-        //    builder.RegisterAssemblyTypes(service).Where(t => t.Name.EndsWith("Service") && !t.Name.StartsWith("I")).AsImplementedInterfaces();
-        //    builder.RegisterAssemblyTypes(repository).Where(t => t.Name.EndsWith("Repository") && !t.Name.StartsWith("I")).AsImplementedInterfaces();
-        //    builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>)).InstancePerDependency();
-
-        //}
          
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
@@ -57,35 +44,22 @@ namespace Dinner.WebApi
             //services.Configure<MemoryCacheEntryOptions>(options => options.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5));//设置缓存有效时间为5分钟
             #region JWT认证
 
-            services.Configure<JwtSettings>(Configuration.GetSection("JwtSettings"));
-            JwtSettings setting = new JwtSettings();
-            Configuration.Bind("JwtSettings", setting);
-            services.AddAuthentication(option =>
-            {
-                option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(config =>
-            {
-                config.TokenValidationParameters = new TokenValidationParameters
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
                 {
-                    ValidAudience = setting.Audience,
-                    ValidIssuer = setting.Issuer,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(setting.SecretKey))
-                };
-                /*
-                config.SecurityTokenValidators.Clear();
-                config.SecurityTokenValidators.Add(new MyTokenValidate());
-                config.Events = new JwtBearerEvents()
-                {
-                    OnMessageReceived = context =>
+                    options.TokenValidationParameters = new TokenValidationParameters
                     {
-                        var token = context.Request.Headers["myToken"];
-                        context.Token = token.FirstOrDefault();
-                        return Task.CompletedTask;
-                    }
-                };
-                */
-            });
+                        ValidateIssuer = true,//是否验证Issuer
+                        ValidateAudience = true,//是否验证Audience
+                        ValidateLifetime = true,//是否验证失效时间
+                        ClockSkew = TimeSpan.FromSeconds(30),
+                        ValidateIssuerSigningKey = true,//是否验证SecurityKey
+                        ValidAudience = AppSettings.AdminConfig.Audience,//Audience
+                        ValidIssuer = AppSettings.AdminConfig.Issuer,//Issuer，这两项和前面签发jwt的设置一致
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(AppSettings.AdminConfig.JwtSecurityKey))//拿到SecurityKey
+                    };
+                });
+
 
             #endregion
 
@@ -110,13 +84,26 @@ namespace Dinner.WebApi
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 // 添加控制器层注释，true表示显示控制器注释
                 options.IncludeXmlComments(xmlPath, true);
+                options.OperationFilter<SecurityRequirementsOperationFilter>();
+
+                // 方案名称“Blog.Core”可自定义，上下一致即可
+                options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+                {
+                    Description = "JWT授权(数据将在请求头中进行传输) 直接在下框中输入Bearer {token}（注意两者之间是一个空格）\"",
+                    Name = "Authorization", // jwt默认的参数名称
+                    In = ParameterLocation.Header, // jwt默认存放Authorization信息的位置(请求头中)
+                    Type = SecuritySchemeType.ApiKey
+                });
+
+
+
                 #endregion
-                 
+
                 //options.IncludeXmlComments(Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, "Dinner.WebApi.xml"));
                 //options.IncludeXmlComments(Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, "Dinner.DAL.xml"));
                 //options.IncludeXmlComments(Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, "Dinner.BLL.xml"));
                 //options.IncludeXmlComments(Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, "Dinner.Base.xml"));
-                options.OperationFilter<SecurityRequirementsOperationFilter>();
+
             });
 
             #endregion
@@ -125,11 +112,11 @@ namespace Dinner.WebApi
             {
                 options.Filters.Add(new CustomerExceptionFilter());
             });
+
+
             services.AddSingleton(new RedisHelper());
 
-
-
-
+            
 
             #region 依赖注入
 
@@ -144,17 +131,17 @@ namespace Dinner.WebApi
             var service = Assembly.Load("Dinner.BLL");
 
             //注册仓储，所有IRepository接口到Repository的映射
-            builder.RegisterAssemblyTypes(repository).Where(t => t.Name.EndsWith("Repository") && !t.Name.StartsWith("I")).AsImplementedInterfaces(); 
+            builder.RegisterAssemblyTypes(repository).Where(t => t.Name.EndsWith("Repository") && !t.Name.StartsWith("I")).AsImplementedInterfaces();
             //注册服务，所有IApplicationService到ApplicationService的映射
-            builder.RegisterAssemblyTypes(service).Where(t => t.Name.EndsWith("Service") && !t.Name.StartsWith("I")).AsImplementedInterfaces();
-            //builder.RegisterAssemblyTypes(assemblys).Where(t => t.Name.EndsWith("AppService") && !t.Name.StartsWith("I")).AsImplementedInterfaces();
-
-
+            builder.RegisterAssemblyTypes(service).Where(t => t.Name.EndsWith("Service") && !t.Name.StartsWith("I")).AsImplementedInterfaces(); 
+            //注册实体
+            builder.RegisterAssemblyTypes(service).Where(t => t.Name.EndsWith("Model")).AsImplementedInterfaces();
+             
             builder.Populate(services);
             ApplicationContainer = builder.Build();
 
             return new AutofacServiceProvider(ApplicationContainer); //第三方IOC接管 core内置DI容器 
-             //return services.BuilderInterceptableServiceProvider(builder => builder.SetDynamicProxyFactory());
+                                                                     //return services.BuilderInterceptableServiceProvider(builder => builder.SetDynamicProxyFactory());
             #endregion
 
         }
@@ -169,6 +156,14 @@ namespace Dinner.WebApi
             app.UseStaticFiles();
             #region 使用SwaggerUI
 
+
+            app.UseRouting();
+            //授权
+            app.UseAuthentication();
+            //认证
+            app.UseAuthorization();
+
+
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
@@ -177,12 +172,7 @@ namespace Dinner.WebApi
 
             #endregion
 
-            app.UseRouting();
-            //授权
-            app.UseAuthentication();
-            //认证
-            app.UseAuthorization();
-
+          
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

@@ -243,7 +243,7 @@ D:\guojiahui\Git\DinnerBase\Dinner.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Exte
 D:\guojiahui\Git\DinnerBase\Dinner.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 D:\guojiahui\Git\DinnerBase\Dinner.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 D:\guojiahui\Git\DinnerBase\Dinner.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\guojiahui\Git\DinnerBase\Dinner.WebApi\bin\Debug\netcoreapp3.1\log4net.config
 D:\guojiahui\Git\DinnerBase\Dinner.WebApi\obj\Debug\netcoreapp3.1\Dinner.WebApi.csproj.CoreCompileInputs.cache
 D:\guojiahui\Git\DinnerBase\Dinner.WebApi\obj\Debug\netcoreapp3.1\Dinner.WebApi.MvcApplicationPartsAssemblyInfo.cs
 D:\guojiahui\Git\DinnerBase\Dinner.WebApi\obj\Debug\netcoreapp3.1\Dinner.WebApi.MvcApplicationPartsAssemblyInfo.cache
-D:\guojiahui\Git\DinnerBase\Dinner.WebApi\bin\Debug\netcoreapp3.1\log4net.config

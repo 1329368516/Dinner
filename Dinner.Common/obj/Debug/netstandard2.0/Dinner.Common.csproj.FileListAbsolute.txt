@@ -15,3 +15,4 @@ D:\guojiahui\Git\DinnerBase\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common
 D:\guojiahui\Git\DinnerBase\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.csproj.CoreCompileInputs.cache
 D:\guojiahui\Git\DinnerBase\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.dll
 D:\guojiahui\Git\DinnerBase\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.pdb
+D:\guojiahui\Git\DinnerBase\Dinner.Common\obj\Debug\netstandard2.0\Dinner.Common.csprojAssemblyReference.cache

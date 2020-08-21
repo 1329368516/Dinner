@@ -21,9 +21,6 @@ namespace Dinner.BLL.UserService
         public Task<UsersModel> GetUsers()
         { 
             return userRepository.GetUsers();
-        }
-
-        
-
+        }  
     }
 }

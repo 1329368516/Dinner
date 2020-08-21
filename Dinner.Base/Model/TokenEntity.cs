@@ -8,6 +8,8 @@ namespace Dinner.Base.Model
     {
 
         public string JwtKeyName { get; set; }
+         
+        public string Issuer { get; set; }
         public string Audience { get; set; }
 
         public string JwtSecurityKey { get; set; }
@@ -19,6 +21,8 @@ namespace Dinner.Base.Model
         public string ConnstringSql { get; set; }
 
         public string ConnectionRedisString { get; set; }
+
+
 
 
 
